@@ -1,0 +1,34 @@
+<app-form (formSubmit)="onFormSubmit($event)"></app-form>
+<table class="styled-table">
+    <thead>
+      <tr>
+        <th *ngFor="let column of displayedColumns">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let match of matches">
+        <td>{{ match.season }}</td>
+        <td>{{ match.city }}</td>
+        <td>{{ match.date }}</td>
+        <td>{{ match.match_type }}</td>
+        <td>{{ match.player_of_match }}</td>
+        <td>{{ match.venue }}</td>
+        <td>{{ match.team1 }}</td>
+        <td>{{ match.team2 }}</td>
+        <td>{{ match.toss_winner }}</td>
+        <td>{{ match.toss_decision }}</td>
+        <td>{{ match.winner }}</td>
+        <td>{{ match.result }}</td>
+        <td>{{ match.result_margin }}</td>
+        <td>{{ match.target_runs }}</td>
+        <td>{{ match.target_overs }}</td>
+        <td>{{ match.super_over }}</td>
+        <td>{{ match.method }}</td>
+        <td>{{ match.umpire1 }}</td>
+        <td>{{ match.umpire2 }}</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!matches || matches.length === 0">No matches found!</p>
+  <app-pie-chart [season]="selectedSeason" [team]="selectedTeam"></app-pie-chart>

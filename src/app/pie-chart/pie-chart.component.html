@@ -1,0 +1,12 @@
+<div class="chart-container" *ngIf="pieChartData.length">
+  <ngx-charts-pie-chart
+    [results]="pieChartData"
+    [legend]="true"
+    [labels]="true"
+    [doughnut]="false"
+    [explodeSlices]="false"
+    [gradient]="false"
+    [animations]="true"
+    [scheme]="colorScheme">
+  </ngx-charts-pie-chart>
+</div>

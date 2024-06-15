@@ -1,0 +1,100 @@
+.styled-table thead tr {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+  background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+}
+
+.styled-table th {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #333333; /* Dark color for header text */
+}
+
+.styled-table td {
+  font-size: 14px;
+  color: #333333;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.6); /* White background with transparency */
+}
+
+.styled-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Lighter white background on hover */
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #6a11cb;
+}
+
+.styled-table tbody td:nth-of-type(1) {
+  color: #6a11cb; /* Season column color */
+}
+
+.styled-table tbody td:nth-of-type(2) {
+  color: #2575fc; /* City column color */
+}
+
+.styled-table tbody td:nth-of-type(3) {
+  color: #ff6b6b; /* Date column color */
+}
+
+.styled-table tbody td:nth-of-type(4) {
+  color: #ffa726; /* Match type column color */
+}
+
+.styled-table tbody td:nth-of-type(5) {
+  color: #66bb6a; /* Player of match column color */
+}
+
+.styled-table tbody td:nth-of-type(6) {
+  color: #26a69a; /* Venue column color */
+}
+
+.styled-table tbody td:nth-of-type(7),
+.styled-table tbody td:nth-of-type(8) {
+  color: #42a5f5; /* Teams columns color */
+}
+
+.styled-table tbody td:nth-of-type(9),
+.styled-table tbody td:nth-of-type(10) {
+  color: #7e57c2; /* Toss columns color */
+}
+
+.styled-table tbody td:nth-of-type(11) {
+  color: #ef5350; /* Winner column color */
+}
+
+.styled-table tbody td:nth-of-type(12),
+.styled-table tbody td:nth-of-type(13) {
+  color: #ab47bc; /* Result columns color */
+}
+
+.styled-table tbody td:nth-of-type(14),
+.styled-table tbody td:nth-of-type(15) {
+  color: #26c6da; /* Target columns color */
+}
+
+.styled-table tbody td:nth-of-type(16) {
+  color: #ff7043; /* Super over column color */
+}
+
+.styled-table tbody td:nth-of-type(17) {
+  color: #78909c; /* Method column color */
+}
+
+.styled-table tbody td:nth-of-type(18),
+.styled-table tbody td:nth-of-type(19) {
+  color: #8d6e63; /* Umpire columns color */
+}

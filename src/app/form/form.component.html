@@ -1,0 +1,30 @@
+<h1 class="app-title">IPL Pulse - Track IPL Matches</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-container">
+    <div class="form-group">
+      <label for="season">Season:</label>
+      <select id="season" formControlName="season" required>
+        <option value="">Select Season</option>
+        <option *ngFor="let season of seasons" [value]="season">{{ season }}</option>
+      </select>
+      <div *ngIf="form.get('season')?.invalid && form.get('season')?.touched" class="error">
+        Season is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="team">Team:</label>
+      <select id="team" formControlName="team" required>
+        <option value="">Select Team</option>
+        <option *ngFor="let team of teams" [value]="team">{{ team }}</option>
+      </select>
+      <div *ngIf="form.get('team')?.invalid && form.get('team')?.touched" class="error">
+        Team is required.
+      </div>
+    </div>
+  </div>
+
+  <div class="submit-btn-container">
+    <button type="submit" [disabled]="form.invalid" class="submit-btn">Submit</button>
+  </div>
+</form>
