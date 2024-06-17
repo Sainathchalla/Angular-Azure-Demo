@@ -4,7 +4,8 @@ html, body { height: 100%; }
 body { 
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background-image: url('C:/Users/6268162/my-angular-project/src/assets/Img1.jpg'); /* Adjust the path as per your file location */
+    /* background-image: url('C:/Users/6268162/my-angular-project/src/assets/Img1.jpg'); Adjust the path as per your file location */
+    background-image: url('../assets/Img1.jpg');
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* No repeating of the image */
