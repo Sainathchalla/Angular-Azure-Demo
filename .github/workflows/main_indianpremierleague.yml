@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - IPL-AngularDemo
+name: Build and deploy Node.js app to Azure Web App - IndianPremierLeague
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -26,15 +26,12 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
-
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: release.zip
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,22 +47,19 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
-
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
       
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2F533FDA775C4AAABE68596F5D3DB963 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1F1EEAD4F1B74D37B52CAB73929A5A94 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3C93F718BA3841339E5B2F9B504899AA }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9D997D01B1354909AFDF2401F70B93E7 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3E695510307841128F4FDF2A6C5BF470 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2F27CB4984554A1D9FFCF3B5586D29B7 }}
 
       - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
-          app-name: 'IPL-AngularDemo'
+          app-name: 'IndianPremierLeague'
           slot-name: 'Production'
           package: .
           
