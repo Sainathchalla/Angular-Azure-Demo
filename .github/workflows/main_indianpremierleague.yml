@@ -28,7 +28,7 @@ jobs:
           # npm run test --if-present
 
       - name: Zip Artifacts
-        run: Compress-Archive -Path * -DestinationPath release.zip
+        run: Compress-Archive -Path dist/my-angular-project\* -DestinationPath release.zip
         shell: pwsh
       
       - name: Upload artifact for deployment job
